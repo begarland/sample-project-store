@@ -15,7 +15,7 @@ export class CreateItemDto {
    * The quantity of the item in inventory
    * @example '100'
    */
-  quantity: number = 0;
+  quantity: number;
 
   /**
    * The category of the item

@@ -3,13 +3,13 @@ import {
   Get,
   Post,
   Body,
-  Patch,
-  Param,
-  Delete,
+  // Patch,
+  // Param,
+  // Delete,
 } from '@nestjs/common';
-import { ItemsService } from './items.service';
+import { ItemsService } from './items.mongo.service';
 import { CreateItemDto } from './dto/create-item.dto';
-import { UpdateItemDto } from './dto/update-item.dto';
+// import { UpdateItemDto } from './dto/update-item.dto';
 
 @Controller('items')
 export class ItemsController {
@@ -25,18 +25,18 @@ export class ItemsController {
     return this.itemsService.findAll();
   }
 
-  @Get(':id')
-  findOne(@Param('id') id: string) {
-    return this.itemsService.findOne(+id);
-  }
+  // @Get(':id')
+  // findOne(@Param('id') id: string) {
+  //   return this.itemsService.findOne(+id);
+  // }
 
-  @Patch(':id')
-  update(@Param('id') id: string, @Body() updateItemDto: UpdateItemDto) {
-    return this.itemsService.update(+id, updateItemDto);
-  }
+  // @Patch(':id')
+  // update(@Param('id') id: string, @Body() updateItemDto: UpdateItemDto) {
+  //   return this.itemsService.update(+id, updateItemDto);
+  // }
 
-  @Delete(':id')
-  remove(@Param('id') id: string) {
-    return this.itemsService.remove(+id);
-  }
+  // @Delete(':id')
+  // remove(@Param('id') id: string) {
+  //   return this.itemsService.remove(+id);
+  // }
 }
